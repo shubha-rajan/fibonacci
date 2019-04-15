@@ -5,8 +5,8 @@
 # ....
 # e.g. 6th fibonacci number is 8
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n) because the number of iterations is dependent on the size of the number
+# Space complexity: O(1) because there will only ever be 4 int variables created, regardless of the size of the number
 def fibonacci(n)
   if n && n >= 0
     current = 0
