@@ -8,23 +8,20 @@
 # Time complexity: O(n) because the number of iterations is dependent on the size of the number
 # Space complexity: O(1) because there will only ever be 4 int variables created, regardless of the size of the number
 def fibonacci(n)
-  if n && n >= 0
-    current = 0
-    one_before = 0
-    two_before = 0
-    i = 0
-    while i <= n
-      if i == 1
-        current = 1
-      else
-        two_before = one_before
-        one_before = current
-        current = one_before + two_before
-      end
-      i += 1
+  raise ArgumentError, "n must be an integer greater than 0" unless n && n >= 0
+  current = 0
+  one_before = 0
+  two_before = 0
+  i = 0
+  while i <= n
+    if i == 1
+      current = 1
+    else
+      two_before = one_before
+      one_before = current
+      current = one_before + two_before
     end
-    return current
-  else
-    raise ArgumentError, "n must be an integer greater than 0"
+    i += 1
   end
+  return current
 end
